@@ -37,13 +37,13 @@
                                 <thead>
                                     <tr>
                                         <th><strong>Product</strong></th>
-                                        <th><strong>Quantity</strong></th>
+                                        <th class="text-center"><strong>Quantity</strong></th>
                                         <th class="text-right"><strong>Price</strong></th>
                                     </tr>
                                 </thead>
                                     <tr t-foreach="o.line_ids" t-as="line">
                                         <td><span t-field="line.product_id"/></td>
-                                        <td><span t-field="line.product_qty"/> <span t-field="line.product_uom_id" groups="product.group_uom"/></td>
+                                        <td class="text-center"><span t-field="line.product_qty"/> <span t-field="line.product_uom_id" groups="product.group_uom"/></td>
                                         <td class="text-right"><span t-field="line.product_id.lst_price"/></td>
                                     </tr>
                                     <tr>
