@@ -22,31 +22,27 @@
                                     <tr>
                                         <th><strong>Inventory</strong></th>
                                         <th><strong>Date</strong></th>
+                                        <th><strong>Location</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td><span t-field="o.name"/></td>
                                         <td><span t-field="o.date"/></td>
+                                        <td><span t-field="o.location_id"/></td>
                                     </tr>
                                 </tbody>
                             </table>
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
-                                        <th><strong>Location</strong></th>
                                         <th><strong>Product</strong></th>
-                                        <th><strong>Production Lot</strong></th>
-                                        <th><strong>Package</strong></th>
                                         <th><strong>Quantity</strong></th>
                                         <th class="text-right"><strong>Price</strong></th>
                                     </tr>
                                 </thead>
                                     <tr t-foreach="o.line_ids" t-as="line">
-                                        <td><span t-field="line.location_id"/></td>
                                         <td><span t-field="line.product_id"/></td>
-                                        <td><span t-field="line.prod_lot_id"/></td>
-                                        <td><span t-field="line.package_id"/></td>
                                         <td><span t-field="line.product_qty"/> <span t-field="line.product_uom_id" groups="product.group_uom"/></td>
                                         <td class="text-right"><span t-field="line.product_id.lst_price"/></td>
                                     </tr>
