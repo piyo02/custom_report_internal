@@ -44,7 +44,12 @@
                                     <tr t-foreach="o.line_ids" t-as="line">
                                         <td><span t-field="line.product_id"/></td>
                                         <td class="text-center"><span t-field="line.product_qty"/> <span t-field="line.product_uom_id" groups="product.group_uom"/></td>
-                                        <td class="text-right"><span t-field="line.product_id.lst_price"/></td>
+                                        <t t-if="line.product_id.canvas_price > 0">
+                                            <td class="text-right"><span t-field="line.product_id.canvas_price"/></td>
+                                        </t>
+                                        <t t-else="">
+                                            <td class="text-right"><span t-field="line.product_id.lst_price"/></td>
+                                        </t>
                                     </tr>
                                     <tr>
                                         <td/>
