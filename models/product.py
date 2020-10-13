@@ -14,5 +14,7 @@ class ProductTemplate(models.Model):
 
         for line in canvas_pricelist.item_ids:
             product = self.env['product.template'].search([('name', '=', line.name)])
-            product.canvas_price = line.fixed_price
+            product.update({
+                'canvas_price' : line.fixed_price
+            })
             

@@ -33,6 +33,7 @@ with background, signature, and be calculated
 		"report/custom_partnerledger.xml",
 		"report/custom_style.xml",
 		"report/custom_trialbalance.xml",
+		"view/product.xml",
 	],
 	"installable": True,
 	"auto_install": False,
